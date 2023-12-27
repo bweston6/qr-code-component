@@ -6,7 +6,7 @@ defineProps(["image", "alt", "title", "body"]);
 <template>
   <article>
     <img :alt="alt" :src="require('@/assets/images/' + image)" />
-    <header>{{ title }}</header>
+    <h2>{{ title }}</h2>
     <p>{{ body }}</p>
   </article>
 </template>
@@ -19,7 +19,7 @@ article {
   border-radius: var(--_radius);
   font-size: 0.9rem;
   font-weight: 600;
-  max-width: 32ch;
+  max-width: 33ch;
   padding: var(--_padding);
   text-align: center;
   width: 100%;
@@ -27,7 +27,7 @@ article {
 img {
   border-radius: calc(var(--_radius) - var(--_padding));
 }
-header {
+h2 {
   color: var(--color-100);
   font-size: 1.25rem;
   font-weight: 900;
