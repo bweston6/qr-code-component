@@ -1,0 +1,27 @@
+:root {
+  --color-100: #123;
+  --color-500: color-mix(
+    in srgb,
+    var(--color-100) 60%,
+    transparent
+  );
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  color: var(--color-500);
+  background-color: #D5E1EF;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  min-height: 100svh;
+}

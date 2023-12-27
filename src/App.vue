@@ -1,26 +1,28 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<script setup>
+import { useI18n } from "vue-i18n";
+import ImageCardComponent from "./components/ImageCardComponent.vue";
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const { t } = useI18n(); // call `useI18n`, and spread `t` from  `useI18n` returning
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<template>
+  <main>
+    <ImageCardComponent
+      image="image-qr-code.png"
+      :alt="t('message.qr-code.alt')"
+      :title="t('message.qr-code.title')"
+      :body="t('message.qr-code.body')"
+    />
+  </main>
+</template>
+
+<style scoped>
+main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 1rem;
 }
 </style>
